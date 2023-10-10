@@ -1,0 +1,100 @@
+@import url(../../styles/Fonts.scss);
+
+.demo-form {
+  margin: 12.5rem 0 6.25rem;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 1100px) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 4rem;
+
+    @media screen and (min-width: 740px) {
+      font-size: 48px;
+      margin-right: 12.5rem;
+    }
+    @media screen and (min-width: 1100px) {
+      max-width: 300px;
+      margin-bottom: 0;
+    }
+  }
+  &__form {
+    flex: 1;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  &__label {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  &__input {
+    padding: 16px;
+    border-radius: 5px;
+    background: #262329;
+    border: none;
+    &:focus {
+      outline: 2px solid #464352;
+    }
+  }
+  &__textarea {
+    padding: 16px;
+    border-radius: 5px;
+    background: #262329;
+    border: none;
+    min-height: 150px;
+    resize: none;
+    &::placeholder {
+      font-family: "Manrope";
+      font-weight: 500;
+    }
+    &:focus {
+      outline: 2px solid #464352;
+    }
+  }
+  &__button {
+    display: flex;
+    padding: 16px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 700;
+    background: #e0ff00;
+    color: #0c0b0e;
+    border: none;
+    width: 150px;
+    height: 60px;
+    cursor: pointer;
+    transition: background-color 0.1s, transform 0.1s;
+    &:active {
+      background-color: #a7bb13;
+      transform: translateY(2px);
+    }
+  }
+}
+
+.error {
+  outline: 2px solid #a12c24;
+  &:focus {
+    outline: 2px solid #a12c24;
+  }
+}
+.error-copy {
+  color: #a12c24;
+  font-size: 0.9rem;
+}

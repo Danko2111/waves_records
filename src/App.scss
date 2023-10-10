@@ -1,0 +1,28 @@
+@import url(./styles/Fonts.scss);
+
+.max-width {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  @media screen and (min-width: 700px) {
+    padding: 0 4rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+label,
+li,
+button {
+  font-family: "Syne";
+  font-weight: bold;
+}
+
+p,
+input,
+textarea {
+  font-family: "Manrope";
+  font-weight: 500;
+}
