@@ -44,17 +44,19 @@ function Form() {
           },
           public_key
         )
-        .then(
-          () => {
-            toast.success("Demo submitted");
-
+        .then((response) => {
+          if (response.status === 200) {
+            toast.success("Demo submitted successfully");
             setErrors({});
             setFormInfo(initialState);
-          },
-          () => {
+          } else {
             toast.error("Failed to submit demo");
           }
-        );
+        })
+        .catch((error) => {
+          console.error("Unhandled promise rejection:", error);
+          toast.error("An unexpected error occurred");
+        });
     }
   };
 
