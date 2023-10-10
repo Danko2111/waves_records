@@ -3,7 +3,7 @@ import "./Form.scss";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
-import { public_key, service_id, template_id } from "../../../config";
+import { public_key, template_id, service_id } from "../../../config";
 
 function Form() {
   const initialState = {
