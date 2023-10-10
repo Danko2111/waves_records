@@ -3,7 +3,7 @@ import "./Form.scss";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
-import { public_key, template_id, service_id } from "../../../config";
+import config from "../../../config";
 
 function Form() {
   const initialState = {
@@ -32,8 +32,8 @@ function Form() {
     } else {
       emailjs
         .send(
-          service_id,
-          template_id,
+          config.service_id,
+          config.template_id,
           {
             name: formInfo.name,
             email: formInfo.email,
@@ -42,7 +42,7 @@ function Form() {
             genre: formInfo.genre,
             comments: formInfo.comments,
           },
-          public_key
+          config.public_key
         )
         .then((response) => {
           if (response.status === 200) {
